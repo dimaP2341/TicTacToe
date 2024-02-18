@@ -1,0 +1,138 @@
+:root {
+    --color-grey-dark: #99999980;
+    --color-grey-light: #ded9d9;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: linear-gradient(to right top, var(--color-grey-light), var(--color-grey-dark));
+    position: relative;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.text {
+    font-size: 2.4rem;
+}
+
+.container {
+    background-color: white;
+    min-width: 35rem;
+    min-height: 35rem;
+    border: solid black 5px;
+    border-radius: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    transition: all .3s;
+    box-shadow: 0 .3rem 3rem black;
+ }
+
+.container > * {
+    border: 1px solid black;
+}
+
+.item {
+    border-radius: 2rem;
+    margin: .5rem;
+    position: relative;
+    display: flex;
+    padding: .8rem;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.item:hover {
+    background-color: rgba(185, 184, 184, 0.9);
+}
+
+.krest {
+    color: rgb(221, 5, 5);
+    font-size: 3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    color: rgb(24, 166, 17);
+    font-size: 3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.winColor {
+    color: rgb(21, 168, 21);
+    background-color: gold;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.blockWinner {
+    margin-top: 2.4rem;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    font-size: 2.5rem;
+}
+
+.textWin {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+
+#winner {
+    font-size: 2.4rem;
+    color: rgb(255, 217, 0);
+    font-weight: 600;
+}
+
+.btnNewGame {
+    padding: 1.2rem;
+    background: rgb(55, 196, 55);
+    border-radius: 1.2rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnNewGame:hover {
+    background: rgb(82, 229, 82);
+    transform: scale(1.1) translateY(-.2rem);
+}
+
+@media (min-width: 600px) {
+    .container {
+        height: 40rem;
+        width: 40rem;
+    }
+}
+
+@media (min-width: 756px) {
+    .container {
+        height: 50rem;
+        width: 50rem;
+    }
+}
